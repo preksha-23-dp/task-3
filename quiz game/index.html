@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Interactive Quiz</h1>
+      <p class="subtitle">Single, multiple choice & fill-in-the-blank</p>
+    </header>
+
+    <section id="quiz-container" class="card">
+      <div id="progress" class="progress">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <div id="question-area">
+        <!-- question will be rendered here -->
+      </div>
+
+      <div class="controls">
+        <button id="prevBtn" class="btn secondary">Previous</button>
+        <button id="submitBtn" class="btn primary">Submit Answer</button>
+        <button id="nextBtn" class="btn secondary">Next</button>
+      </div>
+
+      <div id="feedback" class="feedback"></div>
+    </section>
+
+    <section id="result" class="card result hidden">
+      <h2>Your Score</h2>
+      <p id="score-text"></p>
+      <div id="detailed-result"></div>
+      <button id="restartBtn" class="btn primary">Restart Quiz</button>
+    </section>
+
+    <footer class="footer">
+      <small>Built for practice — try different question types!</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

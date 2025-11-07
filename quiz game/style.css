@@ -1,0 +1,60 @@
+:root{
+  --bg:#f3f6fb;
+  --card:#fff;
+  --primary:#2b8cff;
+  --accent:#00bfa5;
+  --muted:#6b7280;
+  --success:#16a34a;
+  --danger:#ef4444;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Arial;background:var(--bg);color:#111}
+.app{max-width:900px;margin:36px auto;padding:12px}
+.header{text-align:center;margin-bottom:18px}
+.subtitle{color:var(--muted);margin-top:6px}
+
+/* Card */
+.card{background:var(--card);border-radius:10px;padding:18px;box-shadow:0 8px 28px rgba(20,30,40,0.06);}
+
+/* Progress */
+.progress{height:10px;background:#eef2ff;border-radius:8px;overflow:hidden;margin-bottom:12px}
+.progress-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--primary),var(--accent));transition:width .35s ease}
+
+/* Question area */
+#question-area h2{font-size:1.25rem;margin-bottom:8px}
+.question-meta{color:var(--muted);font-size:.9rem;margin-bottom:10px}
+.options{margin-top:10px;display:flex;flex-direction:column;gap:8px}
+.option {
+  display:flex;align-items:center;gap:12px;padding:10px;border-radius:8px;border:1px solid #edf2ff;background:#fbfdff;
+  cursor:pointer;transition:transform .08s ease,box-shadow .08s;
+}
+.option:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(43,140,255,0.08)}
+.option input{transform:scale(1.05)}
+.option-label{flex:1}
+
+/* controls */
+.controls{display:flex;gap:10px;justify-content:flex-end;margin-top:14px}
+.btn{padding:8px 14px;border-radius:8px;border:0;cursor:pointer;font-weight:600}
+.btn.primary{background:var(--primary);color:white}
+.btn.secondary{background:#f3f4f6;color:var(--muted)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+
+/* feedback */
+.feedback{margin-top:12px;padding:10px;border-radius:8px;font-weight:600}
+.feedback.correct{background:#ecfdf5;color:var(--success);border:1px solid rgba(16,185,129,0.12)}
+.feedback.incorrect{background:#fff1f2;color:var(--danger);border:1px solid rgba(239,68,68,0.08)}
+
+/* result */
+.result h2{margin-top:0}
+.hidden{display:none}
+
+/* result details */
+.result-list{margin-top:12px}
+.result-item{padding:8px;border-radius:8px;border:1px solid #f1f5f9;margin-bottom:8px;background:#fff}
+
+/* small */
+@media(max-width:640px){
+  .controls{flex-direction:column;align-items:stretch}
+  .btn{width:100%}
+}
